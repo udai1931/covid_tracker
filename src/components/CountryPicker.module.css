@@ -1,0 +1,9 @@
+.container{
+    display:flex;
+    justify-content: center;
+}
+
+.formControl{
+    width:30%;
+    margin-bottom:50px;
+}

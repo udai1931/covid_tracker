@@ -1,0 +1,16 @@
+
+body{
+    background-color : rgb(235, 235, 235) ;
+}
+
+.container {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column;
+}
+.image{
+    width:350px;    
+    margin-top:50px;
+    margin-left: 245px;
+}
