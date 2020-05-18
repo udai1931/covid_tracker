@@ -12,6 +12,9 @@ const CountryPicker = ( {handleCountryChange}) => {
         }
         fetchApi();
     }, [setFetchedCountries]);
+    if(!fetchedCountries){
+        return 'FetchCountries Loading ...'
+    }
     return(
         <div className={styles.container}>
             <FormControl className={styles.formControl}>
