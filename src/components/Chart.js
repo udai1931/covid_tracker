@@ -3,6 +3,12 @@ import { fetchDailyData } from '../api/index'
 import { Line, Bar } from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
+var chartColors = {
+    color1: 'rgba(0, 0, 255, 0.5)',
+    color2: 'rgba(0, 255, 0, 0.5)',
+    color3: 'rgba(255, 0, 0, 0.5)'
+  };
+
 const Chart = ({data, country}) => {
     const [dailyData, setDailyData] = useState([]);
 
@@ -46,7 +52,7 @@ const Chart = ({data, country}) => {
                 labels:['Infected','Recovered','Deaths'],
                 datasets: [{
                     label : 'People',
-                    borderColor : ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'] ,
+                    backgroundColor : [chartColors.color1,chartColors.color2,chartColors.color3] ,
                     data : [data.confirmed.value, data.recovered.value, data.deaths.value],
                 }]
             }}

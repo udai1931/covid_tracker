@@ -10,7 +10,9 @@ body{
     flex-direction: column;
 }
 .image{
+    display: block;
     width:350px;    
-    margin-top:50px;
-    margin-left: 245px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
 }

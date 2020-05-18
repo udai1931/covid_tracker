@@ -26,8 +26,8 @@ class App extends Component{
             <div className={styles.container}>
                 <h1>
                     <img src={corona} className={styles.image} alt="Corona"/>
-                    <Card data = {this.state.data} />
                     <CountryPicker handleCountryChange={this.handleCountryChange}/>
+                    <Card data = {this.state.data} />
                     <Chart data={this.state.data} country={this.state.country}/>
                 </h1>
             </div>
