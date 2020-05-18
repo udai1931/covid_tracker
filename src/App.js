@@ -9,8 +9,8 @@ import cx from 'classnames';
 
 class App extends Component{
     state = {
-        data:{},
-       country:''
+        data:{0,0,0},
+       country:'Global'
     }
 
     async componentDidMount() {
