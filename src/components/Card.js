@@ -10,7 +10,7 @@ const Cards = ({data}) => {
     }
     else{
         if(!data.confirmed){
-            return 'Loading...';
+            return '\nLoading...';
         }
     }
     return(
