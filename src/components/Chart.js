@@ -3,15 +3,15 @@ import { fetchDailyData } from '../api/index'
 import { Line, Bar } from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
-const Chart = ({data:{confirmed,deaths,recovered}, country}) => {
+const Chart = ({data:{confirmed, deaths,recovered}, country}) => {
     const [dailyData, setDailyData] = useState([]);
 
     useEffect(() => {
         const fetchApi = async () => {
         setDailyData(await fetchDailyData());
-        } 
+        };
         fetchApi();
-    },[]);
+    }, []);
 
     const lineChart = (
         dailyData? 
@@ -32,7 +32,7 @@ const Chart = ({data:{confirmed,deaths,recovered}, country}) => {
                 }]
             }}
         />):
-        null
+        <h1>Loading....</h1>
     );
 
     const barChar = (
@@ -53,6 +53,9 @@ const Chart = ({data:{confirmed,deaths,recovered}, country}) => {
         />):
         null
     )
+    if(!confirmed){
+        return 'Loading Chart';
+    }
     return(
         <div className={styles.container}>
             {country?barChar:lineChart}
